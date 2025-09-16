@@ -6,7 +6,7 @@
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/13 13:31:04 by elise             #+#    #+#             */
-/*   Updated: 2025/09/16 15:18:09 by elise            ###   ########.fr       */
+/*   Updated: 2025/09/16 15:30:24 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*str;
 	size_t	i;
 	size_t	j;
-	char	*tmp;
 
 	if (s2 == NULL)
 		return (NULL);

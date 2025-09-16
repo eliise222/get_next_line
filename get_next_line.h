@@ -6,14 +6,12 @@
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 15:18:16 by elise             #+#    #+#             */
-/*   Updated: 2025/09/16 15:18:17 by elise            ###   ########.fr       */
+/*   Updated: 2025/09/16 15:29:42 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
-
-# define BUFFER_SIZE 10
 
 # include <stdlib.h>
 # include <stddef.h>
