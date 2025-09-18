@@ -6,7 +6,7 @@
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/13 13:31:04 by elise             #+#    #+#             */
-/*   Updated: 2025/09/16 15:30:24 by elise            ###   ########.fr       */
+/*   Updated: 2025/09/18 16:10:35 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,19 +30,19 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char *s1, const char *s2)
 {
 	char	*str;
 	size_t	i;
 	size_t	j;
 
-	if (s2 == NULL)
+	if (!s2)
 		return (NULL);
-	if (s1 == NULL)
+	if (!s1)
 		s1 = "";
 	str = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!str)
-		return (NULL);
+		return (free(s1), NULL);
 	i = 0;
 	while (s1[i])
 	{
@@ -53,6 +53,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	while (s2[j])
 		str[i++] = s2[j++];
 	str[i] = '\0';
+	if (s1[0] != '\0')
+		free(s1);
 	return (str);
 }
 

@@ -6,7 +6,7 @@
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/13 13:40:51 by elise             #+#    #+#             */
-/*   Updated: 2025/09/16 15:17:59 by elise            ###   ########.fr       */
+/*   Updated: 2025/09/18 15:58:27 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ char	*read_until_newline(int fd, char *keep)
 {
 	int		c;
 	char	buffer[BUFFER_SIZE + 1];
-	char	*tmp;
 
 	c = 1;
 	while (c > 0 && (keep == NULL || !(ft_strchr(keep, '\n'))))
@@ -25,13 +24,12 @@ char	*read_until_newline(int fd, char *keep)
 		if (c == -1)
 		{
 			free(keep);
-			keep = NULL;
 			return (NULL);
 		}
+		if (c == 0)
+			break ;
 		buffer[c] = '\0';
-		tmp = keep;
 		keep = ft_strjoin(keep, buffer);
-		free(tmp);
 		if (keep == NULL)
 			return (NULL);
 	}
