@@ -6,7 +6,7 @@
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 15:18:16 by elise             #+#    #+#             */
-/*   Updated: 2025/09/18 15:56:53 by elise            ###   ########.fr       */
+/*   Updated: 2025/09/22 13:21:05 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdint.h>
+
+# define MAX_LINE_LENGTH 1000000
 
 //FONCTION PRINCIPALE
 char	*get_next_line(int fd);

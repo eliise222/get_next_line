@@ -6,7 +6,7 @@
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/13 13:31:04 by elise             #+#    #+#             */
-/*   Updated: 2025/09/18 16:10:35 by elise            ###   ########.fr       */
+/*   Updated: 2025/09/22 13:53:45 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,6 @@ char	*ft_strjoin(char *s1, const char *s2)
 	while (s2[j])
 		str[i++] = s2[j++];
 	str[i] = '\0';
-	if (s1[0] != '\0')
-		free(s1);
 	return (str);
 }
 
@@ -112,3 +110,14 @@ char	*ft_strdup(const char *s)
 	}
 	return (d);
 }
+/*char	ft_dupsepstr(char f)
+{
+	size_t	ttlen;
+	char	min[101];
+	char	tt;
+
+	ttlen = 0;
+	tt = malloc(strlen)
+	
+
+}*/
