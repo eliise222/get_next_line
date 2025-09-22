@@ -6,7 +6,7 @@
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/13 13:40:51 by elise             #+#    #+#             */
-/*   Updated: 2025/09/22 14:07:15 by elise            ###   ########.fr       */
+/*   Updated: 2025/09/22 14:32:37 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ static char	*read_loop(int fd, char *keep, size_t *len)
 	ssize_t	c;
 
 	buf = malloc(BUFFER_SIZE + 1);
+	c = 0;
 	if (!buf)
 		return (NULL);
 	while (!keep || !ft_strchr(keep, '\n'))
