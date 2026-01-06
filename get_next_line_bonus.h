@@ -14,11 +14,11 @@
 # define GET_NEXT_LINE_BONUS_H
 
 # include <stdlib.h>
-# include <stddef.h>
 # include <unistd.h>
-# include <string.h>
-# include <stdint.h>
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 # define MAX_LINE_LENGTH 1000000
 
 //FONCTION PRINCIPALE
