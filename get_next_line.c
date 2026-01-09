@@ -6,7 +6,7 @@
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/13 13:40:51 by elise             #+#    #+#             */
-/*   Updated: 2025/09/22 14:32:37 by elise            ###   ########.fr       */
+/*   Updated: 2026/01/08 15:37:35 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,3 +104,19 @@ char	*get_next_line(int fd)
 	line = extract_line(&keep);
 	return (line);
 }
+/*
+#include <fcntl.h>
+#include <stdio.h>
+int	main()
+{
+	int		fd;
+	char	*line;
+	
+	fd = open("test.txt", O_RDONLY);
+	line = get_next_line(fd);
+	printf("%s", line);
+	free(line);
+	close(fd);
+	return (0);
+}
+*/
